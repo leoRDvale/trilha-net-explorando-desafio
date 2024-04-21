@@ -15,7 +15,6 @@ namespace DesafioProjetoHospedagem.Models
 
         public void CadastrarHospedes(List<Pessoa> hospedes)
         {
-            // EM ANDAMENTO
             if (Suite.Capacidade >= hospedes.Count)
             {
                 Hospedes = hospedes;
@@ -33,18 +32,14 @@ namespace DesafioProjetoHospedagem.Models
 
         public int ObterQuantidadeHospedes()
         {
-            //EM ANDAMENTO
             return Hospedes.Count;
         }
 
         public decimal CalcularValorDiaria()
         {
-            // EM ANDAMENTO
             decimal valor = DiasReservados * Suite.ValorDiaria;
             decimal novoValor = valor - (valor * 0.10M);
 
-            // Regra: Caso os dias reservados forem maior ou igual a 10, conceder um desconto de 10%
-            // *IMPLEMENTE AQUI*
             if (DiasReservados >= 10)
             {
                 valor = novoValor;
